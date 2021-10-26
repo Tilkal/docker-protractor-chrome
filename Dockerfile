@@ -19,5 +19,5 @@ RUN npm i -g npm && \
     && apt-get purge --auto-remove -y curl \
     && rm -rf /var/lib/apt/lists/* \
     && npm install -g protractor \
-    && webdriver-manager update   
+    && webdriver-manager update --versions.chrome=$(google-chrome --version | cut -d ' ' -f 3)   
     
